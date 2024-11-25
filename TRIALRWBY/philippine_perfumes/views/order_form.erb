@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Your Order</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Order Your Perfume</h1>
+    <nav>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/catalog" class="nav-link">Catalog</a>
+      <a href="/order" class="nav-link active">Order</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Order Form</h2>
+    <form action="/submit_order" method="post">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+      <label for="address">Delivery Address:</label>
+      <input type="text" id="address" name="address" required placeholder="Enter delivery address">
+
+      <label for="product">Choose a Product:</label>
+      <select id="product" name="product" required>
+        <option value="Sampaguita Bliss">Sampaguita Bliss</option>
+        <option value="Manila Mist">Manila Mist</option>
+        <option value="Tropical Sunrise">Tropical Sunrise</option>
+      </select>
+
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Philippine Perfumes. All Rights Reserved.</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

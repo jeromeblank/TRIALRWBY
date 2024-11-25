@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Our Perfume Catalog</h1>
+    <nav>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/catalog" class="nav-link active">Catalog</a>
+      <a href="/order" class="nav-link">Order</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Available Perfumes</h2>
+    <div class="product-list">
+      <% @products.each do |product| %>
+        <div class="product-card">
+          <img src="/images/<%= product[:name].downcase.gsub(' ', '_') %>.jpg" alt="<%= product[:name] %>" class="product-image">
+          <h3><%= product[:name] %></h3>
+          <p>Price: ₱<%= product[:price] %></p>
+          <a href="/order?product=<%= product[:name] %>" class="btn">Order Now</a>
+        </div>
+      <% end %>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Philippine Perfumes. All Rights Reserved.</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
